@@ -52,7 +52,7 @@ License
            create(JobManager.PRIORITY_MIN).
            callback(new MyCallback().
            addGroupMask(MY_JOB_GROUP_0).
-          addGroupMask(MY_JOB_GROUP_0);
+          addGroupMask(MY_JOB_GROUP_0));
     JobManager.instance().register(myJob);
 
 After register, job scheduler run automatically.
@@ -63,7 +63,7 @@ See ```net.noranuk0.job.RepeatedlyRunCallback```
 ## suspend, disable, and enable job group
 suspend
 
-`JobManager.instance().suspendGroup(MY_JOB_GROUP_ID, 5000 /*ms*/);`
+`JobManager.instance().suspendGroup(MY_JOB_GROUP_ID, System.currentTimeMillis() + 5000 /*wake up time*/);`
 
 disable, enable
 
